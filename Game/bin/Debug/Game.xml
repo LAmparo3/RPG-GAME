@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Game</name>
+    </assembly>
+    <members>
+        <member name="T:Dungeon.Angel">
+            <summary>
+            this angel class gives you 10 moves when you interact with it
+            </summary>
+        </member>
+        <member name="M:Dungeon.GenBoard.SetBoard(System.Int32,System.Int32)">
+            <summary>
+            This sets up our Gameboard made up of tiles
+            </summary>
+            <param name="row"></param>
+            <param name="col"></param>
+            <returns>our board array</returns>
+        </member>
+        <member name="M:Dungeon.GenBoard.DrawBoard">
+            <summary>
+            Displays our board in the console
+            </summary>
+        </member>
+        <member name="M:Dungeon.GenBoard.MakeRoom">
+            <summary>
+            takes the hght and width of our board, picks a random coord and creates a random sized room made of ... 
+            </summary>
+        </member>
+        <member name="M:Dungeon.GenBoard.GenStairs">
+            <summary>
+            loops through our Gameboard and adds any tile with a "." symbol to our room list. Then we pick our random coord to place our stairs
+            </summary>
+        </member>
+        <member name="M:Dungeon.GenBoard.CreateRooms(System.Int32)">
+            <summary>
+            creates multiple rooms
+            </summary>
+            <param name="amtRoom"></param>
+        </member>
+        <member name="M:Dungeon.GenBoard.CreateCorridors">
+            <summary>
+            Connects our rooms together
+            </summary>
+        </member>
+        <member name="M:Dungeon.GenBoard.PlaceActor(Dungeon.IActor)">
+            <summary>
+            places our actors onto the board.
+            </summary>
+            <param name="a"></param>
+        </member>
+        <member name="M:Dungeon.GenBoard.CreateMonsters(System.Int32)">
+            <summary>
+            displays our HUD
+            </summary>
+            <param name=""></param>
+            <summary>
+            creates a set number of monsters
+            </summary>
+            <param name="monsterNum"></param>
+        </member>
+        <member name="M:Dungeon.GenBoard.CreateAngels(System.Int32)">
+            <summary>
+            creates a set number of angels
+            </summary>
+            <param name="angelNum"></param>
+        </member>
+        <member name="M:Dungeon.GenBoard.MonsterMove(Dungeon.Player)">
+            <summary>
+            Moves our monsters randomly
+            </summary>
+            <param name="player"></param>
+        </member>
+        <member name="M:Dungeon.GenBoard.NextLevel(Dungeon.Player)">
+            <summary>
+            when the player kills every monster he is able to go to the next floor
+            </summary>
+            <param name="player"></param>
+        </member>
+        <member name="M:Dungeon.GenBoard.EndGame">
+            <summary>
+            end game after moves are done
+            </summary>
+        </member>
+        <member name="T:Dungeon.NewMonster">
+            <summary>
+            this monster moves like a knight in chess but also has to be hit multiple times
+            </summary>
+        </member>
+        <member name="M:Dungeon.NewMonster.Move(Dungeon.GenBoard,Dungeon.Player)">
+            <summary>
+            This movement is like a knight in chess. Try to catch him it'll be some what tricky but not hard. 
+            </summary>
+            <param name="board"></param>
+            <param name="player"></param>
+        </member>
+        <member name="M:Dungeon.Player.Move(Dungeon.GenBoard,Dungeon.Player)">
+            <summary>
+            command our player to move anywhere in our Dungeon. Having issues with movement
+            </summary>
+            <param name="board"></param>
+            <param name="player"></param>
+        </member>
+        <member name="M:Dungeon.Player.Interact(Dungeon.GenBoard,Dungeon.IActor)">
+            <summary>
+            interact function deals with angel, monster and specialmonster interactions
+            </summary>
+            <param name="board"></param>
+            <param name="a"></param>
+        </member>
+        <member name="M:Dungeon.Player.StatBox">
+            <summary>
+            creates the gray box for the stats
+            </summary>
+        </member>
+        <member name="M:Dungeon.Player.PrintStatusScreen">
+            <summary>
+            Prints the stats of the player to the status screen.
+            </summary>
+        </member>
+        <member name="T:Dungeon.IActor">
+            <summary>
+            contract that both player and monster are built around
+            </summary>
+        </member>
+        <member name="T:Dungeon.Monster">
+            <summary>
+            this monster class generate monsters that die after 1 hit
+            </summary>
+        </member>
+    </members>
+</doc>
